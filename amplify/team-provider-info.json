@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-batwebsite-staging-150829-authRole",
+      "UnauthRoleArn": "arn:aws:iam::720773116058:role/amplify-batwebsite-staging-150829-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::720773116058:role/amplify-batwebsite-staging-150829-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-batwebsite-staging-150829-deployment",
+      "UnauthRoleName": "amplify-batwebsite-staging-150829-unauthRole",
+      "StackName": "amplify-batwebsite-staging-150829",
+      "StackId": "arn:aws:cloudformation:us-west-2:720773116058:stack/amplify-batwebsite-staging-150829/d8f9d100-7a5a-11ee-8fe9-06880b86aaa7",
+      "AmplifyAppId": "d20o7cv13142nl"
+    }
+  }
+}
