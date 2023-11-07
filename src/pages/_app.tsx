@@ -1,4 +1,4 @@
-import '@/utils/aws/Amplify';
+import '../utils/aws/Amplify'
 import { Authenticator } from '@aws-amplify/ui-react';
 import type { AppProps } from 'next/app';
 
