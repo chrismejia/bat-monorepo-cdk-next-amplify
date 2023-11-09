@@ -1,10 +1,17 @@
-import { CfnOutput, Stack, StackProps } from "aws-cdk-lib";
+import { CfnOutput, SecretValue, Stack, StackProps } from "aws-cdk-lib";
 import { Construct } from "constructs";
 import * as codebuild from "aws-cdk-lib/aws-codebuild";
-import { App, RedirectStatus } from "@aws-cdk/aws-amplify-alpha";
+import {
+  App,
+  GitHubSourceCodeProvider,
+  RedirectStatus,
+} from "@aws-cdk/aws-amplify-alpha";
 import { CfnApp } from "aws-cdk-lib/aws-amplify";
 
 interface HostingStackProps extends StackProps {
+  readonly owner: string;
+  readonly repository: string;
+  readonly githubOauthTokenName: string;
   readonly environmentVariables?: { [name: string]: string };
 }
 
@@ -13,6 +20,11 @@ export class AmplifyHostingStack extends Stack {
     super(scope, id, props);
     const amplifyApp = new App(this, "BATMonorepoCDKNextFrontend", {
       appName: "BAT Monorepo with CDK + Next Frontend",
+      sourceCodeProvider: new GitHubSourceCodeProvider({
+        owner: props.owner,
+        repository: props.repository,
+        oauthToken: SecretValue.secretsManager(props.githubOauthTokenName),
+      }),
       autoBranchDeletion: true,
       customRules: [
         {
