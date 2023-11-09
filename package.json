@@ -1,6 +1,8 @@
-{"scripts": {
-    "install:frontend": "cd frontend && npm install",
-    "install:backend": "cd backend && npm install",
+{
+  "name": "bat-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
     "frontend:dev": "cd frontend && npx next dev",
     "frontend:build": "cd frontend && npx next build",
     "frontend:start": "cd frontend && npx next start",
@@ -9,5 +11,5 @@
   "workspaces": [
     "frontend",
     "backend"
-  ] 
+  ]
 }
