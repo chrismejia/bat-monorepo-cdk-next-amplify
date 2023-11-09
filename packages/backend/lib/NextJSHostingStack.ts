@@ -34,27 +34,6 @@ export class AmplifyHostingStack extends Stack {
         },
       ],
       environmentVariables: props.environmentVariables,
-      buildSpec: codebuild.BuildSpec.fromObjectToYaml({
-        version: 1,
-        appRoot: "packages/frontend",
-        frontend: {
-          phases: {
-            preBuild: {
-              commands: ["npm ci"],
-            },
-            build: {
-              commands: ["npm run build"],
-            },
-          },
-          artifacts: {
-            baseDirectory: ".next",
-            files: ["**/*"],
-          },
-          cache: {
-            paths: ["node_modules/**/*"],
-          },
-        },
-      }),
     });
 
     amplifyApp.addBranch("main", {
