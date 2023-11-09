@@ -18,10 +18,10 @@ const amplifyHostingStack = new AmplifyHostingStack(
   app,
   "ProductHostingStack",
   {
-
     //pass in any envVars from the above stacks here
     environmentVariables: {
       USERPOOL_ID: authStack.userpool.userPoolId,
+      AMPLIFY_MONOREPO_APP_ROOT: "frontend",
     },
   }
 );
