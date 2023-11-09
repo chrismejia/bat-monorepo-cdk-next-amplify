@@ -1,12 +1,13 @@
 version: 1
-appRoot: packages/frontend
 frontend:
   phases:
     preBuild:
       commands:
+        - cd packages/frontend
         - npm ci
     build:
       commands:
+        - cd packages/frontend
         - npm run build
   artifacts:
     baseDirectory: .next
