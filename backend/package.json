@@ -1,0 +1,16 @@
+{
+  "name": "@bat-website/cdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "my-stack.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-cdk/aws-amplify-alpha": "^2.105.0-alpha.0",
+    "@aws-cdk/aws-cognito-identitypool-alpha": "^2.105.0-alpha.0"
+  }
+}

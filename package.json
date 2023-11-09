@@ -1,0 +1,6 @@
+{"scripts": {
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "dev": "cd frontend && next dev"
+  }
+}

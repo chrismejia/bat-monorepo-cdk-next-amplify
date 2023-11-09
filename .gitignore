@@ -1,0 +1,14 @@
+# System files
+.DS_Store
+*.pem
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+
+# Misc
+*.log*
+*.tsbuildinfo
+.secret-*
+**.sample
