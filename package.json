@@ -7,9 +7,9 @@
     "frontend:build": "cd packages/frontend && npx next build",
     "frontend:start": "cd packages/frontend && npx next start",
     "frontend:lint": "cd packages/frontend && npx next lint",
-    "backend:init": "npx cdk init",
-    "backend:bootstrap": "npx cdk bootstrap",
-    "backend:deploy": "npx cdk deploy --all"
+    "backend:init": "cd packages/backend && npx cdk init",
+    "backend:bootstrap": "cd packages/backend && npx cdk bootstrap",
+    "backend:deploy": "cd packages/backend && npx cdk deploy --all"
   },
   "workspaces": [
     "packages/*"

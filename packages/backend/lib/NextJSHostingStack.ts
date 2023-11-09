@@ -28,7 +28,7 @@ export class AmplifyHostingStack extends Stack {
       autoBranchDeletion: true,
       customRules: [
         {
-          source: "/<*>",
+          source: "/packages/frontend/<*>",
           target: " /index.html",
           status: RedirectStatus.NOT_FOUND_REWRITE,
         },

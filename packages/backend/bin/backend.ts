@@ -24,7 +24,7 @@ const amplifyHostingStack = new AmplifyHostingStack(
     // swap for your github username
     owner: "chrismejia",
     // swap for your github frontend repo
-    repository: "bat-monorepo-cdk-next-amplify/packages/frontend",
+    repository: "bat-monorepo-cdk-next-amplify",
     //pass in any envVars from the above stacks here
     environmentVariables: {
       USERPOOL_ID: authStack.userpool.userPoolId,
