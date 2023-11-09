@@ -3,14 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "frontend:dev": "cd frontend && npx next dev",
-    "frontend:build": "cd frontend && npx next build",
-    "frontend:start": "cd frontend && npx next start",
-    "frontend:lint": "cd frontend && npx next lint",
-    "backend:deploy": "cd backend && npx cdk deploy --all"
+    "frontend:dev": "cd packages/frontend && npx next dev",
+    "frontend:build": "cd packages/frontend && npx next build",
+    "frontend:start": "cd packages/frontend && npx next start",
+    "frontend:lint": "cd packages/frontend && npx next lint",
+    "backend:init": "npx cdk init",
+    "backend:bootstrap": "npx cdk bootstrap",
+    "backend:deploy": "npx cdk deploy --all"
   },
   "workspaces": [
-    "frontend",
-    "backend"
+    "packages/*"
   ]
 }

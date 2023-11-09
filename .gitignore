@@ -12,3 +12,5 @@
 *.tsbuildinfo
 .secret-*
 **.sample
+
+node_modules/
