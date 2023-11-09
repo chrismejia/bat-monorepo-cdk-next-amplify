@@ -1,6 +1,13 @@
 {"scripts": {
     "install:frontend": "cd frontend && npm install",
     "install:backend": "cd backend && npm install",
-    "dev": "cd frontend && next dev"
-  }
+    "frontend:dev": "cd frontend && npx next dev",
+    "frontend:build": "cd frontend && npx next build",
+    "frontend:start": "cd frontend && npx next start",
+    "frontend:lint": "cd frontend && npx next lint"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ] 
 }
