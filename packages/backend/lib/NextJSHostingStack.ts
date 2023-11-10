@@ -11,7 +11,6 @@ import { CfnApp } from "aws-cdk-lib/aws-amplify";
 interface HostingStackProps extends StackProps {
   readonly owner: string;
   readonly repository: string;
-  readonly githubOauthTokenName: string;
   readonly environmentVariables?: { [name: string]: string };
 }
 
@@ -23,7 +22,7 @@ export class AmplifyHostingStack extends Stack {
       sourceCodeProvider: new GitHubSourceCodeProvider({
         owner: props.owner,
         repository: props.repository,
-        oauthToken: SecretValue.secretsManager(props.githubOauthTokenName),
+        oauthToken: SecretValue.ssmSecure("githubAuthToken"),
       }),
       autoBranchDeletion: true,
       customRules: [
